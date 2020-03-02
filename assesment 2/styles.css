@@ -1,0 +1,13 @@
+
+body{
+    background-color:lightcyan;
+    margin: inherit;
+}
+.temp{
+    background-color: lightgoldenrodyellow;
+    padding: 20px;
+
+
+    .con{
+        background-color: ligh;
+    }

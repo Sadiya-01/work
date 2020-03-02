@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO</title>
+    <link rel="stylesheet"type="text/css" href="./styles.css">
+</head>
+<body>
+
+  <input type="text" id="txt"> 
+  <button onclick="addLI()">Add</button>
+  <button onclick="deleteLI()">delete</button>
+
+  <div class="temp">
+  <ul>
+      <li>Party</li>
+      <li>Mocktail</li>
+      <li>Events</li>
+      </ul>
+  </div>
+
+
+</body>
+<script>
+     var inputText = document.getElementById("txt"),
+                 items = document.querySelectorAll("#list li"),
+                 tab = [], index;
+         
+            
+             
+             for(var i = 0; i < items.length; i++){
+                 tab.push(items[i].innerHTML);
+             }
+             
+        
+             for(var i = 0; i < items.length; i++){
+                 
+                 items[i].onclick = function(){
+                     index = tab.indexOf(this.innerHTML);
+                     console.log(this.innerHTML + " INDEX = " + index);
+                     // set the selected li value into input text
+                     inputText.value = this.innerHTML;
+                 };
+                 
+             }
+            function function-add() {
+console.log(add)
+            } 
+</script>
+</html>
