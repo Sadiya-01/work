@@ -1,0 +1,53 @@
+body{
+    background-color:lightgrey;
+margin: 20px;
+}       
+input[type=button]{
+    background-color:lightgrey;
+    width: 130%;
+    color:black;
+    padding: 8px;
+}
+
+
+#input[type=text]{
+border-color: rgb(114, 176, 214);
+color:black;
+text-align: right;
+margin: 10px;
+padding: 5px;
+
+
+}
+
+.title{
+text-align: center;
+margin-bottom: 52px;
+border-radius: 20px;
+}
+.cal{
+box-sizing: border-box;
+text-align: center;
+position: absolute;
+
+}
+
+td{
+    background-color:grey;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#box {
+
+    padding-left: 256%;
+
+}
+#clas{
+    align-content: center;
+    padding-left:  256%;
+    padding: 20px,20px;
+    font-size: 20px;
+}
+.cl{
+    font-size: 19px;
+}

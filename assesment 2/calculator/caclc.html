@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css "href="./styles.css">
+
+</head>
+<body>
+
+    <div class=title>CALCULATOR</div>
+    <div class="cal">
+        <form name="p1">
+            <div id="clas">
+            <input class="cl" type="text" name="cl"> 
+            </form>
+    </div>
+<div id="box">
+            <table class="tab-1">
+              <tr>
+                  <td ><input class="button"  type="button" onclick="clearm()" value="AC"></td>
+                  <td ><input class="button"  type="button" onclick="sqrot()" value="sqrt()"></td>
+                  <td><input class="button" type="button" onclick="erase()" value="^" ></td>
+                  <td><input class="button" type="button" onclick="insert('-')" value="-" ></td>
+              </tr>  
+              <tr>
+                  <td> <input class="button" type="button"  onclick="insert('7')" value="7"></td>
+                  <td><input class="button" type="button" onclick="insert('8')" value="8"></td>
+                  <td><input class="button" type="button" onclick="insert('9')" value="9"></td>
+                  <td><input class="button" type="button" onclick="insert('+')" value="+"></td>
+              </tr>
+              <tr>
+                <td><input class="button" type="button" onclick="insert('4')" value="4"></td>
+                <td><input class="button" type="button" onclick="insert('5')" value="5"></td>
+                <td><input class="button" type="button" onclick="insert('6')" value="6"></td>
+                <td><input class="button" type="button" onclick="insert('/')" value="/"></td>
+              </tr>
+              <tr>
+                  <td><input class="button" type="button" onclick="insert('1')" value="1"></td>
+                  <td><input class="button" type="button" onclick="insert('2')" value="2"></td>
+                  <td><input class="button" type="button" onclick="insert('3')" value="3"></td>
+                  <td><input class="button" type="button" onclick="insert('*')" value="*"></td>
+              </tr>
+              <tr>
+                <td colspan="2"><input class="button"  type="button" onclick="insert('0')" value="0"></td>
+                <td><input class="button" type="button" onclick="insert('.')" value="."></td>
+                <td><input class="button" type="button" onclick="equals()" value="="></td>
+              </tr>
+            </table>
+</div>
+        </div>
+
+        <script>
+        
+        sqrot= ()=>{
+            let num = document.querySelector('.cl').value;
+            let sqr = Math.sqrt(num);
+            document.p1.cl.value= (num,sqr);
+            
+        }            
+        clearm = () => { 
+
+
+         document.querySelector('.cl').value=0;
+
+    
+        }  
+        erase = ()=>{
+         let exp= document.p1.cl.value;
+         document.p1.cl.value= exp.substring(0,exp.length-1);
+        }
+           
+        insert = (num) => {
+      document.p1.cl.value=document.p1.cl.value +num;
+        }
+
+        equals = ()=> {
+                let exp = document.p1.cl.value;
+                if(exp)
+                document.p1.cl.value=eval(exp);
+         }
+    
+    </script>
+</body>
+</html>
